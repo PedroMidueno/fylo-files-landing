@@ -1,0 +1,91 @@
+---
+import Logo from "./assets/Logo.astro";
+import iconEmail from "../assets/images/icon-email.svg";
+import iconLocation from "../assets/images/icon-location.svg";
+import iconPhone from "../assets/images/icon-phone.svg";
+
+import iconFacebook from "../assets/images/icon-facebook.svg";
+import iconX from "../assets/images/icon-x.svg";
+import iconInstagram from "../assets/images/icon-instagram.svg";
+---
+
+<footer class="bg-navy-950">
+  <div
+    class="[--container-padding:40px_0] custom-container text-white font-opensans-400 flex flex-wrap"
+  >
+    <figure class="w-full object-contain ml-4">
+      <Logo className="w-40" />
+    </figure>
+
+    <div class="flex items-start gap-8 mt-8">
+      <img src={iconLocation.src} alt="Location Icon" class="pt-1 w-4 h-auto" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4 pt-4 w-full">
+      <div class="flex items-start gap-8">
+        <img src={iconPhone.src} alt="Phone icon" class="pt-1 w-4 h-auto" />
+        <p>+1-543-123-4567</p>
+      </div>
+      <div class="flex items-start gap-8">
+        <img src={iconEmail.src} alt="Phone icon" class="pt-1 w-4 h-auto" />
+        <p>example@fylo.com</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-4 w-full mt-16">
+      <a href="#">About Us</a>
+      <a href="#">Jobs</a>
+      <a href="#">Press</a>
+      <a href="#">Blog</a>
+    </div>
+
+    <div class="flex flex-col gap-4 w-full mt-8">
+      <a href="#">Contact Us</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+
+    <div class="flex gap-4 justify-center w-full mt-16">
+      <a href="#">
+        <img
+          src={iconFacebook.src}
+          alt=""
+          class="border border-white p-2 rounded-full h-10 w-10"
+        />
+      </a>
+      <a href="#">
+        <img
+          src={iconX.src}
+          alt=""
+          class="border border-white p-2 rounded-full h-10 w-10"
+        />
+      </a>
+      <a href="#">
+        <img
+          src={iconInstagram.src}
+          alt=""
+          class="border border-white p-2 rounded-full h-10 w-10"
+        />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- 
+
+  
+  
+
+  About Us
+  Jobs
+  Press
+  Blog
+
+  Contact Us
+  Terms
+
+-->

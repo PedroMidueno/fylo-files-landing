@@ -2,7 +2,7 @@
 import HeroImage from "../assets/images/illustration-intro.png";
 ---
 
-<section class="hero-section relative">
+<header class="hero-section relative">
   <div
     class="custom-container [--container-padding:40px_0] flex flex-col items-center gap-6 relative"
   >
@@ -20,15 +20,21 @@ import HeroImage from "../assets/images/illustration-intro.png";
     </p>
 
     <button
-      class="w-52 text-sm font-raleway-700 text-white py-3 rounded-3xl bg-cta"
+      class="w-52 text-sm font-raleway-700 text-white py-3 rounded-3xl bg-cta shadow-xl"
     >
       Get started
     </button>
   </div>
-</section>
+</header>
 
 <style>
-  .hero-section {
+  .hero-section::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-image: url("../assets/images/bg-curvy-mobile.svg"),
       linear-gradient(
         to bottom,
@@ -43,7 +49,7 @@ import HeroImage from "../assets/images/illustration-intro.png";
   }
 
   @media (min-width: 375px) {
-    .hero-section {
+    .hero-section::before {
       background-image: url("../assets/images/bg-curvy-mobile.svg"),
         linear-gradient(
           to bottom,
@@ -54,13 +60,50 @@ import HeroImage from "../assets/images/illustration-intro.png";
   }
 
   @media (min-width: 425px) {
-    .hero-section {
+    .hero-section::before {
       background-image: url("../assets/images/bg-curvy-mobile.svg"),
         linear-gradient(
           to bottom,
           var(--color-navy-850) calc(420px),
           var(--color-navy-900) calc(420px)
         );
+    }
+  }
+
+  @media (min-width: 530px) {
+    .hero-section::before {
+      background-image: url("../assets/images/bg-curvy-mobile.svg"),
+        linear-gradient(
+          to bottom,
+          var(--color-navy-850) calc(470px),
+          var(--color-navy-900) calc(470px)
+        );
+    }
+  }
+
+  @media (min-width: 640px) {
+    .hero-section::before {
+      background-image: url("../assets/images/bg-curvy-mobile.svg"),
+        linear-gradient(
+          to bottom,
+          var(--color-navy-850) calc(500px),
+          var(--color-navy-900) calc(500px)
+        );
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero-section::before {
+      background-image: url("../assets/images/bg-curvy-desktop.svg"),
+        linear-gradient(
+          to bottom,
+          var(--color-navy-850) 99.5%,
+          var(--color-navy-900) 99.5%
+        );
+
+      background-position:
+        center bottom,
+        center top;
     }
   }
 </style>
