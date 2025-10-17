@@ -1,0 +1,66 @@
+---
+import HeroImage from "../assets/images/illustration-intro.png";
+---
+
+<section class="hero-section relative">
+  <div
+    class="custom-container [--container-padding:40px_0] flex flex-col items-center gap-6 relative"
+  >
+    <figure class="max-w-md">
+      <img class="w-full" src={HeroImage.src} alt="Fylo illustration" />
+    </figure>
+
+    <h1 class="text-white font-raleway-700 text-2xl text-center mt-6 max-w-md">
+      All your files in one secure location, accesible anywhere.
+    </h1>
+    <p class="text-white font-opensans-400 text-center text-sm max-w-md">
+      Fylo stores all your most important files in one secure location. Access
+      them wherever you need, share and collaborate with friends, family and
+      co-workers.
+    </p>
+
+    <button
+      class="w-52 text-sm font-raleway-700 text-white py-3 rounded-3xl bg-cta"
+    >
+      Get started
+    </button>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    background-image: url("../assets/images/bg-curvy-mobile.svg"),
+      linear-gradient(
+        to bottom,
+        var(--color-navy-850) calc(380px),
+        var(--color-navy-900) calc(380px)
+      );
+    background-repeat: no-repeat;
+    background-position:
+      center 260px,
+      center top;
+    background-size: 110%;
+  }
+
+  @media (min-width: 375px) {
+    .hero-section {
+      background-image: url("../assets/images/bg-curvy-mobile.svg"),
+        linear-gradient(
+          to bottom,
+          var(--color-navy-850) calc(400px),
+          var(--color-navy-900) calc(400px)
+        );
+    }
+  }
+
+  @media (min-width: 425px) {
+    .hero-section {
+      background-image: url("../assets/images/bg-curvy-mobile.svg"),
+        linear-gradient(
+          to bottom,
+          var(--color-navy-850) calc(420px),
+          var(--color-navy-900) calc(420px)
+        );
+    }
+  }
+</style>

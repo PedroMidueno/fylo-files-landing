@@ -1,0 +1,37 @@
+---
+import productiveImg from "../assets/images/illustration-stay-productive.png";
+import iconArrow from "../assets/images/icon-arrow.svg";
+---
+
+<section class="bg-navy-900">
+  <div class="custom-container flex flex-col gap-16">
+    <figure class="max-w-md">
+      <img
+        class="w-full"
+        src={productiveImg.src}
+        alt="Stay productive, wherever you are"
+      />
+    </figure>
+
+    <article class="flex flex-col gap-4 text-white font-opensans-400">
+      <h2 class="font-raleway-700 text-center text-xl mb-2">
+        Stay productive, wherever you are
+      </h2>
+
+      <p>
+        Never let location be an issue when accessing your files. Fylo has you
+        covered for all of your file storage needs.
+      </p>
+
+      <p>
+        Securely share files and folders with friends, family and colleagues for
+        live collaboration. No email attachments required.
+      </p>
+
+      <a href="#" class="text-teal-200 flex gap-2 border-b w-fit pb-1">
+        <span>See how Fylo Works</span>
+        <img class="w-6 h-6" src={iconArrow.src} alt="See how Fylo Works" />
+      </a>
+    </article>
+  </div>
+</section>

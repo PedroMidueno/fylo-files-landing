@@ -1,0 +1,90 @@
+---
+import profile1 from "../assets/images/profile-1.jpg";
+import profile2 from "../assets/images/profile-2.jpg";
+import profile3 from "../assets/images/profile-3.jpg";
+import iconQuote from "../assets/images/bg-quotes.png";
+---
+
+<section class="bg-navy-900">
+  <div class="custom-container text-white relative grid grid-cols-1 gap-8">
+    <img
+      class="absolute top-14 left-4 h-6 w-auto"
+      src={iconQuote.src}
+      aria-hidden
+    />
+    <article
+      class="bg-navy-800 p-8 rounded-lg flex flex-col gap-4 font-opensans-400 text-sm shadow-md"
+    >
+      <p>
+        Fylo has improved our team productivity by an order of magnitude. Since
+        making the switch our team has become a well-oiled collaboration
+        machine.
+      </p>
+
+      <div class="flex gap-4 items-center">
+        <figure class="w-10 h-10 rounded-full overflow-clip">
+          <img
+            class="w-full h-full"
+            src={profile1.src}
+            alt="Testimonial Avatar 1"
+          />
+        </figure>
+
+        <div class="flex flex-col">
+          <span class="font-opensans-700">Satish Patel</span>
+          <span class="text-xs text-slate-300">Founder & CEO, Huddle</span>
+        </div>
+      </div>
+    </article>
+
+    <article
+      class="bg-navy-800 p-8 rounded-lg flex flex-col gap-4 font-opensans-400 text-sm shadow-md"
+    >
+      <p>
+        Fylo has improved our team productivity by an order of magnitude. Since
+        making the switch our team has become a well-oiled collaboration
+        machine.
+      </p>
+
+      <div class="flex gap-4 items-center">
+        <figure class="w-10 h-10 rounded-full overflow-clip">
+          <img
+            class="w-full h-full"
+            src={profile2.src}
+            alt="Testimonial Avatar 1"
+          />
+        </figure>
+
+        <div class="flex flex-col">
+          <span class="font-opensans-700">Bruce McKenzie</span>
+          <span class="text-xs text-slate-300">Founder & CEO, Huddle</span>
+        </div>
+      </div>
+    </article>
+
+    <article
+      class="bg-navy-800 p-8 rounded-lg flex flex-col gap-4 font-opensans-400 text-sm shadow-md"
+    >
+      <p>
+        Fylo has improved our team productivity by an order of magnitude. Since
+        making the switch our team has become a well-oiled collaboration
+        machine.
+      </p>
+
+      <div class="flex gap-4 items-center">
+        <figure class="w-10 h-10 rounded-full overflow-clip">
+          <img
+            class="w-full h-full"
+            src={profile3.src}
+            alt="Testimonial Avatar 1"
+          />
+        </figure>
+
+        <div class="flex flex-col">
+          <span class="font-opensans-700">Iva Boyd</span>
+          <span class="text-xs text-slate-300">Founder & CEO, Huddle</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
