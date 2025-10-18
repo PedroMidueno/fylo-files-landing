@@ -4,14 +4,26 @@ import Logo from "./assets/Logo.astro";
 
 <nav class="bg-navy-850">
   <div
-    class="custom-container [--container-padding:30px_0] flex items-center gap-4 font-raleway-400 text-sm sm:text-base"
+    class="custom-container [--container-padding:30px_0] flex items-center gap-4 font-raleway-400 text-sm sm:text-base md:gap-8"
   >
     <figure class="object-contain w-24 sm:w-28">
-      <Logo className="w-full fill-blue-500" />
+      <Logo className="w-full" />
     </figure>
 
-    <a href="#" class="text-white ml-auto">Features</a>
-    <a href="#" class="text-white">Team</a>
-    <a href="#" class="text-white">Sign In</a>
+    <a
+      href="#"
+      class="text-white ml-auto lg:hover:underline hover:font-raleway-700 active:font-raleway-700 custom-transition"
+      >Features</a
+    >
+    <a
+      href="#"
+      class="text-white lg:hover:underline hover:font-raleway-700 active:font-raleway-700 custom-transition"
+      >Team</a
+    >
+    <a
+      href="#"
+      class="text-white lg:hover:underline hover:font-raleway-700 active:font-raleway-700 custom-transition"
+      >Sign In</a
+    >
   </div>
 </nav>

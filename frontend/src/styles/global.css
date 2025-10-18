@@ -47,4 +47,10 @@
     var(--color-teal-200),
     var(--color-cyan-500)
   );
+  background-size: 200% 100%;
+  background-position: right center;
+}
+
+@utility custom-transition {
+  transition: all .3s ease;
 }

@@ -5,9 +5,9 @@
 <section class="get-started-section">
   <div class="custom-container">
     <form
-      class="bg-navy-850 w-full shadow-2xl flex flex-wrap gap-4 text-white px-8 py-12 rounded-lg md:px-20"
+      class="bg-navy-850 w-full shadow-2xl flex flex-wrap gap-4 text-white px-8 py-12 rounded-lg max-w-3xl mx-auto md:px-20"
     >
-      <h3 class="text-xl font-raleway-700 w-full text-center">
+      <h3 class="text-xl font-raleway-700 w-full text-center lg:text-2xl">
         Get Early acess today
       </h3>
       <p class="text-center font-opensans-400 w-full">
@@ -21,11 +21,12 @@
         required
         aria-required
         placeholder="email@example.com"
-        class="w-full sm:w-[60%] bg-white font-opensans-400 py-3 px-4 rounded-3xl text-slate-400 text-sm"
+        class="w-full sm:w-[60%] bg-white font-opensans-400 py-3 px-4 rounded-3xl text-slate-400 text-sm lg:text-base"
       />
       <button
+        id="cta-btn"
         type="submit"
-        class="w-full sm:w-[35%] sm text-sm font-raleway-700 text-white py-3 rounded-3xl bg-cta shadow-xl"
+        class="w-full sm:w-[35%] text-sm font-raleway-700 text-white py-3 rounded-3xl bg-cta shadow-xl lg:text-base cursor-pointer custom-transition"
       >
         Get Started For Free
       </button>
@@ -40,5 +41,19 @@
       var(--color-navy-900) 50%,
       var(--color-navy-950) 50%
     );
+  }
+
+  /* Estilos para dispositivos táctiles */
+  @media (pointer: coarse) {
+    #cta-btn:active {
+      background-position: left center;
+    }
+  }
+
+  /* Estilos para dispositivos con puntero fino (como un ratón) */
+  @media (pointer: fine) {
+    #cta-btn:hover {
+      background-position: left center;
+    }
   }
 </style>

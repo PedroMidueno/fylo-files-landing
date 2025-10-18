@@ -22,7 +22,8 @@ import HeroImage from "../assets/images/illustration-intro.png";
     </p>
 
     <button
-      class="w-52 text-sm sm:text-base font-raleway-700 text-white py-3 rounded-3xl bg-cta shadow-xl"
+      id="cta-btn"
+      class="w-52 text-sm sm:text-base font-raleway-700 text-white py-3 rounded-3xl bg-cta shadow-xl cursor-pointer custom-transition"
     >
       Get started
     </button>
@@ -30,6 +31,21 @@ import HeroImage from "../assets/images/illustration-intro.png";
 </header>
 
 <style>
+  /* Estilos para dispositivos táctiles */
+  @media (pointer: coarse) {
+    #cta-btn:active {
+      background-position: left center;
+    }
+  }
+
+  /* Estilos para dispositivos con puntero fino (como un ratón) */
+  @media (pointer: fine) {
+    #cta-btn:hover {
+      transform: translateY(-2px);
+      background-position: left center;
+    }
+  }
+
   .hero-section::before {
     content: "";
     height: 100%;
@@ -106,6 +122,13 @@ import HeroImage from "../assets/images/illustration-intro.png";
       background-position:
         center bottom,
         center top;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .hero-section::before {
+      background-color: var(--color-navy-850);
+      background-image: unset;
     }
   }
 </style>
