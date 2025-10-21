@@ -4,6 +4,7 @@ export default ({ env }) => ({
       provider: 'aws-s3',
       providerOptions: {
         baseUrl: env('R2_PUBLIC_URL'),
+        rootPath: 'fylo-files',
         s3Options: {
           credentials: {
             accessKeyId: env('R2_ACCESS_KEY_ID'),
