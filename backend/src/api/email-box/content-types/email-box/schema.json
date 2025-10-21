@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "email_boxes",
+  "info": {
+    "singularName": "email-box",
+    "pluralName": "email-boxes",
+    "displayName": "EmailBox"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Parrafo": {
+      "type": "text",
+      "required": true
+    },
+    "TextoCTA": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
