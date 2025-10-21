@@ -4,5 +4,6 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  connectionString: env('DATABASE_URL')
+  url: env('URL'),
+  proxy: true
 });
