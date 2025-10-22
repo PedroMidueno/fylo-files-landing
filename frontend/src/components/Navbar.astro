@@ -1,5 +1,9 @@
 ---
-import Logo from "./assets/Logo.astro";
+interface Props {
+  logoUrl: string;
+}
+
+const { logoUrl } = Astro.props;
 ---
 
 <nav class="bg-navy-850">
@@ -7,7 +11,7 @@ import Logo from "./assets/Logo.astro";
     class="custom-container [--container-padding:30px_0] flex items-center gap-4 font-raleway-400 text-sm sm:text-base md:gap-8"
   >
     <figure class="object-contain w-24 sm:w-28">
-      <Logo className="w-full" />
+      <img src={logoUrl} alt="Logo de Fylo Files" class="w-full" />
     </figure>
 
     <a

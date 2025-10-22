@@ -1,8 +1,12 @@
 ---
-import profile1 from "../assets/images/profile-1.jpg";
-import profile2 from "../assets/images/profile-2.jpg";
-import profile3 from "../assets/images/profile-3.jpg";
 import iconQuote from "../assets/images/bg-quotes.png";
+import type { Testimonial } from "@/lib/getTestimonials";
+import TestimonialCard from "./TestimonialCard.astro";
+interface Props {
+  testimonials: Testimonial[];
+}
+
+const { testimonials } = Astro.props;
 ---
 
 <section class="bg-navy-900">
@@ -14,79 +18,6 @@ import iconQuote from "../assets/images/bg-quotes.png";
       src={iconQuote.src}
       aria-hidden
     />
-    <article
-      class="bg-navy-800 p-8 rounded-lg flex flex-col gap-4 font-opensans-400 text-sm shadow-md sm:text-base md:max-w-md lg:z-20"
-    >
-      <p>
-        Fylo ha mejorado enormemente la productividad de nuestro equipo. Desde
-        el cambio, nuestro equipo se ha convertido en una máquina de
-        colaboración impecable
-      </p>
-
-      <div class="flex gap-4 items-center">
-        <figure class="w-10 h-10 rounded-full overflow-clip">
-          <img
-            class="w-full h-full"
-            src={profile1.src}
-            alt="Testimonial Avatar 1"
-          />
-        </figure>
-
-        <div class="flex flex-col">
-          <span class="font-opensans-700 text-sm">Satish Patel</span>
-          <span class="text-xs text-slate-300">Fundador y CEO, Huddle</span>
-        </div>
-      </div>
-    </article>
-
-    <article
-      class="bg-navy-800 p-8 rounded-lg flex flex-col gap-4 font-opensans-400 text-sm shadow-md sm:text-base md:max-w-md"
-    >
-      <p>
-        Fylo ha mejorado enormemente la productividad de nuestro equipo. Desde
-        el cambio, nuestro equipo se ha convertido en una máquina de
-        colaboración impecable
-      </p>
-
-      <div class="flex gap-4 items-center">
-        <figure class="w-10 h-10 rounded-full overflow-clip">
-          <img
-            class="w-full h-full"
-            src={profile2.src}
-            alt="Testimonial Avatar 1"
-          />
-        </figure>
-
-        <div class="flex flex-col">
-          <span class="font-opensans-700 text-sm">Bruce McKenzie</span>
-          <span class="text-xs text-slate-300">Fundador y CEO, Huddle</span>
-        </div>
-      </div>
-    </article>
-
-    <article
-      class="bg-navy-800 p-8 rounded-lg flex flex-col gap-4 font-opensans-400 text-sm shadow-md sm:text-base md:max-w-md md:col-span-2 lg:col-span-1"
-    >
-      <p>
-        Fylo ha mejorado enormemente la productividad de nuestro equipo. Desde
-        el cambio, nuestro equipo se ha convertido en una máquina de
-        colaboración impecable
-      </p>
-
-      <div class="flex gap-4 items-center">
-        <figure class="w-10 h-10 rounded-full overflow-clip">
-          <img
-            class="w-full h-full"
-            src={profile3.src}
-            alt="Testimonial Avatar 1"
-          />
-        </figure>
-
-        <div class="flex flex-col">
-          <span class="font-opensans-700 text-sm">Iva Boyd</span>
-          <span class="text-xs text-slate-300">Fundador y CEO, Huddle</span>
-        </div>
-      </div>
-    </article>
+    {testimonials.map((testimonial) => <TestimonialCard {...testimonial} />)}
   </div>
 </section>

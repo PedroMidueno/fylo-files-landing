@@ -1,6 +1,10 @@
 ---
-import productiveImg from "../assets/images/illustration-stay-productive.png";
+import type { ProductiveData } from "@/lib/getProductiveData";
 import ArrowIcon from "./assets/ArrowIcon.astro";
+
+interface Props extends ProductiveData {}
+const { title, firstParagraph, secondParagraph, ctaText, imageUrl } =
+  Astro.props;
 ---
 
 <section class="bg-navy-900">
@@ -10,32 +14,29 @@ import ArrowIcon from "./assets/ArrowIcon.astro";
     <figure class="max-w-lg">
       <img
         class="w-full"
-        src={productiveImg.src}
+        src={imageUrl}
         alt="Stay productive, wherever you are"
       />
     </figure>
 
     <article class="flex flex-col gap-4 text-white font-opensans-400 max-w-md">
       <h2 class="font-raleway-700 text-center text-xl mb-2">
-        Mantente productivo, dondequiera que estés
+        {title}
       </h2>
 
       <p>
-        No permita que la ubicación sea un problema al acceder a sus archivos.
-        Fylo cubre todas sus necesidades de almacenamiento.
+        {firstParagraph}
       </p>
 
       <p>
-        Comparte archivos y carpetas de forma segura con amigos, familiares y
-        colegas para colaborar en tiempo real. No se requieren archivos adjuntos
-        en el correo electrónico.
+        {secondParagraph}
       </p>
 
       <a
         href="#"
         class="text-teal-200 flex gap-2 border-b w-fit pb-1 custom-transition hover:text-white active:text-white"
       >
-        <span>Vea cómo funciona Fylo</span>
+        <span>{ctaText}</span>
         <figure class="w-6 h-6 object-contain">
           <ArrowIcon className="w-full" />
         </figure>

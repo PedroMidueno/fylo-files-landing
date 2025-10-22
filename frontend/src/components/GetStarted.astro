@@ -1,5 +1,9 @@
 ---
+import type { EmailBoxData } from "@/lib/getEmailBoxData";
 
+interface Props extends EmailBoxData {}
+
+const { title, paragraph, ctaText } = Astro.props;
 ---
 
 <section class="get-started-section">
@@ -8,12 +12,10 @@
       class="bg-navy-850 w-full shadow-2xl flex flex-wrap gap-4 text-white px-8 py-12 rounded-lg max-w-3xl mx-auto md:px-20"
     >
       <h3 class="text-xl font-raleway-700 w-full text-center lg:text-2xl">
-        Obtenga acceso anticipado hoy
+        {title}
       </h3>
       <p class="text-center font-opensans-400 w-full">
-        Registrarse solo toma un minuto y nuestro plan de inicio gratuito es muy
-        generoso. Si tiene alguna pregunta, nuestro equipo de soporte estará
-        encantado de ayudarle.
+        {paragraph}
       </p>
 
       <input
@@ -28,7 +30,7 @@
         type="submit"
         class="w-full sm:w-[35%] text-sm font-raleway-700 text-white py-3 rounded-3xl bg-cta shadow-xl lg:text-base cursor-pointer custom-transition"
       >
-        Comienza gratis
+        {ctaText}
       </button>
     </form>
   </div>

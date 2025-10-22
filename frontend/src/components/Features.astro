@@ -1,72 +1,18 @@
 ---
-import accessAnywhereImg from "../assets/images/icon-access-anywhere.svg";
-import securityImg from "../assets/images/icon-security.svg";
-import collaborationImg from "../assets/images/icon-collaboration.svg";
-import anyFileImg from "../assets/images/icon-any-file.svg";
+import type { Feature } from "@/lib/getFeatures";
+import FeatureCard from "./FeatureCard.astro";
+
+interface Props {
+  features: Feature[];
+}
+
+const { features } = Astro.props;
 ---
 
 <section class="bg-navy-900">
   <div
     class="custom-container grid grid-cols-1 md:grid-cols-2 md:gap-x-16 gap-y-16 justify-items-center"
   >
-    <article class="flex flex-col items-center gap-3 max-w-sm">
-      <figure class="h-20 w-auto object-contain">
-        <img src={accessAnywhereImg.src} alt="Access your files, anywhere" />
-      </figure>
-
-      <h2 class="font-raleway-700 text-white mt-4 text-xl text-center">
-        Accede a tus archivos desde cualquier lugar
-      </h2>
-      <p class="text-center font-opensans-400 text-white">
-        La capacidad de usar un teléfono inteligente, una tableta o una
-        computadora para acceder a su cuenta significa que sus archivos lo
-        siguen a todas partes.
-      </p>
-    </article>
-
-    <article class="flex flex-col items-center gap-3 max-w-sm">
-      <figure class="h-20 w-auto object-contain">
-        <img src={securityImg.src} alt="Access your files, anywhere" />
-      </figure>
-
-      <h2 class="font-raleway-700 text-white mt-4 text-xl text-center">
-        Seguridad en la que puede confiar
-      </h2>
-      <p class="text-center font-opensans-400 text-white">
-        La autenticación de dos factores y el cifrado controlado por el usuario
-        son solo algunas de las funciones de seguridad que permitimos para
-        ayudar a proteger sus archivos.
-      </p>
-    </article>
-
-    <article class="flex flex-col items-center gap-3 max-w-sm">
-      <figure class="h-20 w-auto object-contain">
-        <img src={collaborationImg.src} alt="Access your files, anywhere" />
-      </figure>
-
-      <h2 class="font-raleway-700 text-white mt-4 text-xl text-center">
-        Colaboración en tiempo real
-      </h2>
-      <p class="text-center font-opensans-400 text-white">
-        Comparte archivos y carpetas de forma segura con amigos, familiares y
-        colegas para colaborar en tiempo real. No se requieren archivos adjuntos
-        en el correo electrónico.
-      </p>
-    </article>
-
-    <article class="flex flex-col items-center gap-3 max-w-sm">
-      <figure class="h-20 w-auto object-contain">
-        <img src={anyFileImg.src} alt="Access your files, anywhere" />
-      </figure>
-
-      <h2 class="font-raleway-700 text-white mt-4 text-xl text-center">
-        Almacena cualquier tipo de archivo
-      </h2>
-      <p class="text-center font-opensans-400 text-white">
-        Ya sea que esté compartiendo fotos de vacaciones o documentos de
-        trabajo, Fylo lo tiene cubierto y le permite almacenar y compartir de
-        forma segura todo tipo de archivos
-      </p>
-    </article>
+    {features.map((feature) => <FeatureCard {...feature} />)}
   </div>
 </section>
