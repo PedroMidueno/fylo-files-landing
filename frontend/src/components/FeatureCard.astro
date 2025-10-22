@@ -10,7 +10,9 @@ const { name, description, imageUrl } = Astro.props;
     <img src={imageUrl} alt="Access your files, anywhere" />
   </figure>
 
-  <h2 class="font-raleway-700 text-white mt-4 text-xl text-center">
+  <h2
+    class="font-raleway-700 text-white mt-4 text-xl w-full flex text-center justify-center items-center md:min-h-[58px]"
+  >
     {name}
   </h2>
   <p class="text-center font-opensans-400 text-white">

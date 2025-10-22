@@ -10,8 +10,12 @@ const { logoUrl } = Astro.props;
   <div
     class="custom-container [--container-padding:30px_0] flex items-center gap-4 font-raleway-400 text-sm sm:text-base md:gap-8"
   >
-    <figure class="object-contain w-24 sm:w-28">
-      <img src={logoUrl} alt="Logo de Fylo Files" class="w-full" />
+    <figure class="h-[34px]">
+      <img
+        src={logoUrl}
+        alt="Logo de Fylo Files"
+        class="h-full w-auto object-contain"
+      />
     </figure>
 
     <a

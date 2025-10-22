@@ -11,9 +11,11 @@ const { title, firstParagraph, secondParagraph, ctaText, imageUrl } =
   <div
     class="custom-container flex flex-col lg:flex-row items-center lg:justify-center gap-16"
   >
-    <figure class="max-w-lg">
+    <figure
+      class="w-full max-w-lg h-[218px] min-[375px]:h-[255px] min-[425px]:h-[290px] sm:h-[388px]"
+    >
       <img
-        class="w-full"
+        class="w-full object-contain"
         src={imageUrl}
         alt="Stay productive, wherever you are"
       />

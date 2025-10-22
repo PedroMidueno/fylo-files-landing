@@ -11,8 +11,14 @@ const { heroTitle, heroDescription, ctaText } = Astro.props;
   <div
     class="custom-container [--container-padding:40px_0] flex flex-col items-center gap-6 relative"
   >
-    <figure class="max-w-lg">
-      <img class="w-full" src={HeroImage.src} alt="Fylo illustration" />
+    <figure
+      class="w-full max-w-lg h-[214px] min-[375px]:h-[252px] min-[425px]:h-[282px] sm:h-[380px]"
+    >
+      <img
+        class="w-full object-contain"
+        src={HeroImage.src}
+        alt="Fylo illustration"
+      />
     </figure>
 
     <h1 class="text-white font-raleway-700 text-2xl text-center mt-6 max-w-lg">
