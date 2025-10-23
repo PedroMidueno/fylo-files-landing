@@ -15,6 +15,12 @@
   --container-padding: 80px 0;
 }
 
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Headings, call to actions, header navigation */
 @utility font-raleway-* {
   font-family: "Raleway", sans-serif;
