@@ -1,0 +1,39 @@
+---
+import ErrorLayout from "@/layouts/ErrorLayout.astro";
+import img404 from "../assets/images/_404_illustration.svg";
+---
+
+<ErrorLayout title="404 Not Found">
+  <section
+    id="error-main"
+    class="h-full w-full flex justify-center items-center"
+  >
+    <div class="custom-container h-full flex flex-col gap-4 items-center">
+      <figure class="w-full max-w-sm mx-auto">
+        <img
+          class="w-full object-contain"
+          src={img404.src}
+          alt="Error en el servidor"
+        />
+      </figure>
+
+      <h1
+        class="text-lg text-center text-yellow-500 font-raleway-700 md:mt-8 md:text-2xl"
+      >
+        Página no encontrada
+      </h1>
+
+      <p
+        class="text-white text-center w-full text-sm font-opensans-400 md:text-base"
+      >
+        La página a la cual intenta acceder no existe
+      </p>
+
+      <a
+        href="/"
+        class="py-0.5 border-b font-opensans-400 border-white text-white"
+        >Regresar a inicio</a
+      >
+    </div>
+  </section>
+</ErrorLayout>
