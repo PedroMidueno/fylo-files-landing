@@ -31,6 +31,12 @@
         "images",
         "files"
       ]
+    },
+    "Orden": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "min": 1
     }
   }
 }
