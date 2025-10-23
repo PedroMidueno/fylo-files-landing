@@ -5,7 +5,7 @@ interface Props extends Feature {}
 const { name, description, imageUrl } = Astro.props;
 ---
 
-<article class="flex flex-col items-center gap-3 max-w-sm">
+<article class="flex flex-col items-center gap-3 max-w-sm" data-aos="zoom-in">
   <figure class="h-20 w-auto object-contain">
     <img src={imageUrl} alt="Access your files, anywhere" />
   </figure>

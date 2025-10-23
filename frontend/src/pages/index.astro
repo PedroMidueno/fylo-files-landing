@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar.astro";
 import Productive from "../components/Productive.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Layout from "../layouts/Layout.astro";
+import "aos/dist/aos.css";
 
 const {
 	generalData,
@@ -33,3 +34,5 @@ const { logoUrl, ...metaData } = generalData;
 	</main>
 	<Footer logoUrl={logoUrl} location={footerData.location} />
 </Layout>
+
+<script src="../lib/aos.ts"></script>

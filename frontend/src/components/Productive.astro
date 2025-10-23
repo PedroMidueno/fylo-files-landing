@@ -9,10 +9,11 @@ const { title, firstParagraph, secondParagraph, ctaText, imageUrl } =
 
 <section id="team" class="bg-navy-900">
   <div
-    class="custom-container flex flex-col lg:flex-row items-center lg:justify-center gap-16"
+    class="custom-container flex flex-col lg:flex-row items-center lg:justify-center gap-16 overflow-visible!"
   >
     <figure
       class="w-full max-w-lg h-[218px] min-[375px]:h-[255px] min-[425px]:h-[290px] sm:h-[388px]"
+      data-aos="fade-right"
     >
       <img
         class="w-full object-contain"
@@ -21,7 +22,10 @@ const { title, firstParagraph, secondParagraph, ctaText, imageUrl } =
       />
     </figure>
 
-    <article class="flex flex-col gap-4 text-white font-opensans-400 max-w-md">
+    <article
+      class="flex flex-col gap-4 text-white font-opensans-400 max-w-md"
+      data-aos="fade-left"
+    >
       <h2 class="font-raleway-700 text-center text-xl mb-2">
         {title}
       </h2>
