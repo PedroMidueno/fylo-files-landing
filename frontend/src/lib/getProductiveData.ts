@@ -8,8 +8,9 @@ export type ProductiveData = {
   imageUrl: string
 }
 
-export const getProductiveData = async (): Promise<ProductiveData> => {
+export const getProductiveData = async ({ scope }: { scope: 'draft' | 'published' }): Promise<ProductiveData> => {
   const { data } = await strapiClient.single('productivo').find({
+    status: scope,
     fields: ['Titulo', 'Parrafo1', 'Parrafo2', 'TextoCTA'],
     populate: {
       Imagen: {

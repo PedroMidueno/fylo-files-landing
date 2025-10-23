@@ -14,7 +14,8 @@ export default defineConfig({
   env: {
     schema: {
       STRAPI_API_TOKEN: envField.string({ context: 'server', access: 'secret' }),
-      STRAPI_API_URL: envField.string({ context: 'server', access: 'public' })
+      STRAPI_API_URL: envField.string({ context: 'server', access: 'public' }),
+      STRAPI_PREVIEW: envField.boolean({ context: 'server', access: 'public', default: false })
     }
   },
 

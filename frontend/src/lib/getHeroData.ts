@@ -6,8 +6,9 @@ export type HeroData = {
   ctaText: string
 }
 
-export const getHeroData = async (): Promise<HeroData> => {
+export const getHeroData = async ({ scope }: { scope: 'draft' | 'published' }): Promise<HeroData> => {
   const { data } = await strapiClient.single('hero-page').find({
+    status: scope,
     fields: ['Titulo', 'Descripcion', 'TextoCTA']
   })
 

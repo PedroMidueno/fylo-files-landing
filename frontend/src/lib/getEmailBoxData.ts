@@ -6,8 +6,9 @@ export type EmailBoxData = {
   ctaText: string
 }
 
-export const getEmailBoxData = async (): Promise<EmailBoxData> => {
+export const getEmailBoxData = async ({ scope }: { scope: 'draft' | 'published' }): Promise<EmailBoxData> => {
   const { data } = await strapiClient.single('email-box').find({
+    status: scope,
     fields: ['Titulo', 'Parrafo', 'TextoCTA']
   })
   return {

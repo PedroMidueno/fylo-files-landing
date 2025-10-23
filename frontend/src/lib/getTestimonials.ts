@@ -7,8 +7,9 @@ export type Testimonial = {
   avatarUrl: string
 }
 
-export const getTestimonials = async (): Promise<Testimonial[]> => {
+export const getTestimonials = async ({ scope }: { scope: 'draft' | 'published' }): Promise<Testimonial[]> => {
   const { data } = await strapiClient.collection('testimonials').find({
+    status: scope,
     sort: 'createdAt',
     fields: ['Nombre', 'Puesto', 'Resena'],
     populate: {

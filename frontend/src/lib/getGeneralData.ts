@@ -10,8 +10,9 @@ export type GeneralData = {
   faviconUrl: string
 }
 
-export const getGeneralData = async (): Promise<GeneralData> => {
+export const getGeneralData = async ({ scope }: { scope: 'draft' | 'published' }): Promise<GeneralData> => {
   const { data } = await strapiClient.single('general').find({
+    status: scope,
     fields: ['Titulo', 'Descripcion', 'Url'],
     populate: {
       Logo: {
