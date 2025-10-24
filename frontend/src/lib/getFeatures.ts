@@ -9,8 +9,8 @@ export type Feature = {
 export const getFeatures = async ({ scope }: { scope: 'draft' | 'published' }): Promise<Feature[]> => {
   const { data } = await strapiClient.collection('features').find({
     status: scope,
-    sort: 'createdAt',
-    fields: ['Nombre', 'Descripcion'],
+    sort: ['Orden:asc', 'createdAt:asc'],
+    fields: ['Nombre', 'Descripcion', 'Orden'],
     populate: {
       Imagen: {
         fields: ['url']
