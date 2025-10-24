@@ -17,6 +17,7 @@ const { testimonials } = Astro.props;
       class="absolute top-14 left-4 h-6 w-auto lg:h-10 lg:top-14 lg:left-0 lg:z-10"
       src={iconQuote.src}
       aria-hidden
+      alt="Imagen ilustrativa de comillas"
     />
     {testimonials.map((testimonial) => <TestimonialCard {...testimonial} />)}
   </div>
